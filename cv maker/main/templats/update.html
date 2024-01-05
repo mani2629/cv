@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Register</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <body>
+        <dvi class="container">
+            <div class="row m-5">
+              <div class="col-md-7">
+                <form action="/update" method="post">
+                  {% csrf_token %}
+                    <h3 class="page-header text-primary text-center">Registration</h3>
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" class="form-control" id="{{profiles.name}}" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" class="form-control" value="{{profiles.email}}" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input type="text" class="form-control" value="{{profiles.phone}}" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label>Summary</label>
+                        <textarea type="text" class="form-control" value="{{profiles.summary}}" name="summary"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>School</label>
+                        <input type="text" class="form-control" value="{{user_profile.school}}" name="mail">
+                    </div>
+                    <div class="form-group">
+                        <label>Degree</label>
+                        <input type="text" class="form-control" value="{{profiles.degree}}" name="degree">
+                    </div>
+                    <div class="form-group">
+                        <label>University</label>
+                        <input type="text" class="form-control" value="{{profiles.university}}" name="university">
+                    </div>
+                    <div class="form-group">
+                        <label>Previous Work</label>
+                        <textarea type="text" class="form-control" value="{{profiles.previous_work}}" name="previous_work"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Skills</label>
+                        <textarea type="text" class="form-control" value="{{profiles.skills}}" name="skills"></textarea>
+                    </div>
+                    
+                    <div class="form-group ">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+
+                   
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
